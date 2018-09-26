@@ -5,7 +5,7 @@
   <parent>
     <groupId>de.maggu2810.osgi.jpa.bundles</groupId>
     <artifactId>base</artifactId>
-    <version>0.1.1-SNAPSHOT</version>
+    <version>0.1.1</version>
   </parent>
 
   <artifactId>jpa-utils</artifactId>
