@@ -5,3 +5,6 @@ Import-Package: \
         !*.internal.*,\
         !*.impl.*,\
         de.maggu2810.osgi.jpa.utils.*
+Provide-Capability:\
+        maggu2810.osgi.jpa;\
+                maggu2810.osgi.jpa="emfconfig"
