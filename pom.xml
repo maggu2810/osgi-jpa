@@ -4,7 +4,7 @@
 
   <groupId>de.maggu2810.osgi.jpa</groupId>
   <artifactId>base</artifactId>
-  <version>0.1.2</version>
+  <version>0.1.3-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>OSGi JPA</name>
@@ -31,7 +31,7 @@
   <scm>
     <connection>scm:git:git@github.com:maggu2810/osgi-jpa.git</connection>
     <developerConnection>scm:git:git@github.com:maggu2810/osgi-jpa.git</developerConnection>
-    <tag>base-0.1.2</tag>
+    <tag>HEAD</tag>
     <url>https://github.com/maggu2810/osgi-jpa</url>
   </scm>
 
