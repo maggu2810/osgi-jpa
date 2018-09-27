@@ -7,4 +7,5 @@ Import-Package: \
         de.maggu2810.osgi.jpa.utils.*
 Provide-Capability:\
         maggu2810.osgi.jpa;\
-                maggu2810.osgi.jpa="emfconfig"
+                maggu2810.osgi.jpa:String="emfconfig";\
+                version:Version=${Bundle-Version}
