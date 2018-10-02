@@ -10,7 +10,7 @@
 
   <artifactId>jpa-utils</artifactId>
 
-  <name>OSGi JPA :: Bundles :: JPA Utilities</name>
+  <name>OSGi JPA - Bundles - JPA Utilities</name>
   <description>Utilities for the JPA management</description>
 
   <dependencies>

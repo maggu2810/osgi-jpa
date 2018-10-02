@@ -13,7 +13,3 @@ buildNumber.properties
 
 *.bak
 
-# Eclipse IDE
-.project
-.settings/
-.classpath

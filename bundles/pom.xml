@@ -12,7 +12,7 @@
   <artifactId>base</artifactId>
   <packaging>pom</packaging>
 
-  <name>OSGi JPA :: Bundles</name>
+  <name>OSGi JPA - Bundles</name>
 
   <modules>
     <module>jpa-utils</module>
