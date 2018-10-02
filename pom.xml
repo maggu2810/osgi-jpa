@@ -112,6 +112,13 @@
         <version>2.2.0</version>
       </dependency>
 
+      <!-- Transaction -->
+      <dependency>
+        <groupId>javax.transaction</groupId>
+        <artifactId>javax.transaction-api</artifactId>
+        <version>1.2</version>
+      </dependency>
+
       <!-- Simple Logging Facade for Java (SLF4J) -->
       <dependency>
         <!--MIT License -->
@@ -190,7 +197,7 @@
           <version>1.16</version>
           <configuration>
             <licenseName>${license.shortcut}</licenseName>
-            <!--<licenseResolver>file://${basedirRoot}/quality/licenses</licenseResolver>-->
+            <!--<licenseResolver>file://${basedirRoot}/quality/licenses</licenseResolver> -->
             <addJavaLicenseAfterPackage>false</addJavaLicenseAfterPackage>
             <emptyLineAfterHeader>true</emptyLineAfterHeader>
             <ignoreNoFileToScan>true</ignoreNoFileToScan>

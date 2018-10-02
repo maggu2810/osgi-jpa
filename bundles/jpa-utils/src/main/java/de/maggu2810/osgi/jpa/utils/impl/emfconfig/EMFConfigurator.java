@@ -28,6 +28,8 @@ import java.util.Set;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
+import javax.transaction.TransactionManager;
+import javax.transaction.UserTransaction;
 
 import org.checkerframework.checker.nullness.qual.Nullable;
 import org.osgi.service.component.annotations.Activate;
@@ -67,8 +69,34 @@ public class EMFConfigurator {
     @SuppressWarnings({ "initialization.fields.uninitialized" /* OSGi: non null if active */ })
     private EntityManagerFactory emf;
 
+    /*
+     * See:
+     * https://github.com/hibernate/hibernate-orm/blob/bd256e4/hibernate-osgi/src/main/java/org/hibernate/osgi/
+     * OsgiJtaPlatform.java
+     *
+     * Cite:
+     * The Enterprise OSGi spec requires all containers to register UserTransaction and TransactionManager OSGi
+     * services.
+     *
+     * If we don't require that this services are present the "createEntityManagerFactory" can throw an exception that
+     * the service is not available.
+     */
+
+    @Reference
+    @SuppressWarnings({ "initialization.fields.uninitialized" /* OSGi: mandatory reference */ })
+    private TransactionManager transactionManager;
+
+    @Reference
+    @SuppressWarnings({ "initialization.fields.uninitialized" /* OSGi: mandatory reference */ })
+    private UserTransaction userTransaction;
+
     @Activate
     void activate(final Map<String, Object> props) {
+        if (logger.isTraceEnabled()) {
+            logger.trace("transaction manager: {}", transactionManager);
+            logger.trace("user transaction: {}", userTransaction);
+        }
+
         final Map<String, Object> jpaProps = new HashMap<>();
         for (final Map.Entry<String, Object> entry : props.entrySet()) {
             final String key = entry.getKey();
