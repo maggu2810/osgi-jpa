@@ -416,6 +416,42 @@
     </plugins>
   </build>
 
+  <repositories>
+    <!-- Maven Central -->
+    <!-- Use this first, so we prefer Central all the time -->
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>Maven Repository Switchboard</name>
+      <url>https://repo1.maven.org/maven2</url>
+    </repository>
+
+    <repository>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>jCenter</id>
+      <url>https://jcenter.bintray.com/</url>
+    </repository>
+
+    <!-- maggu2810's private repository -->
+    <repository>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>bintray-maggu2810-maven</id>
+      <url>https://dl.bintray.com/maggu2810/maven/</url>
+    </repository>
+  </repositories>
+
   <profiles>
 
     <profile>
