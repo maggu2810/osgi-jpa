@@ -40,6 +40,9 @@ import org.osgi.service.jpa.EntityManagerFactoryBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Create an entity manager factory by a provided OSGi configuration.
+ */
 @Component(name = "de.maggu2810.osgi.jpa.utils.emfconfig")
 public class EMFConfigurator {
 
